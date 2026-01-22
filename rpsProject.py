@@ -3,10 +3,10 @@ choices = ["rock", "scissors", "paper"]
 
 
 answer = input("We are going to play a game called rock, paper, scissors.\n"
-"Each layer picks one of three things: rock, paper or scissors.\n"
+"Each player picks one of three things: rock, paper or scissors.\n"
 "If players pick the same things, they go again. If one player picks rock and one scissors, the player who picked rock wins the draw.\n"
 " If one player picks scissors and the other paper, the player who picked scissors wins. Scissors cuts paper.\n"
-"If a player choose paper while the other choose rock, the player who picked paper succeeds. Paper covers rock.\n"
+"If a player pick paper while the other picks rock, the player who picked paper succeeds. Paper covers rock.\n"
 "The game requires 3 points difference to win!\n"
                " Shall we start the game? ").lower()
 wins = 0
@@ -22,10 +22,10 @@ if answer == "yes":
         elif ((player_input == "rock" and computer_input == "scissors")\
             or (player_input == "scissors" and computer_input == "paper")\
             or (player_input == "paper" and computer_input == "rock")):
-            print("You win the draw!")
+            print("You win this draw!")
             wins += 1
         else:
-            print("Player two wins the draw!")
+            print("Player two wins this draw!")
             losses += 1
             if wins >= losses + 3:
                 print(f"Congratulations you win the game! Result: {wins}:{losses} ")
@@ -48,4 +48,4 @@ if answer == "yes":
                     break
 
 elif answer == "no":
-    print("Good buy!")
+    print("Goodbye!")
